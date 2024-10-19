@@ -16,10 +16,10 @@
         <h1>Mortgage Calculator</h1>
         <button>Clear all</button>
       </div>
-      <form>
+      <form class="grid">
         <div>
           <label>Mortgage Amount</label>
-          <div>
+          <div class="input-container-styling ">
             <button>£</button>
             <input type="text">
           </div>
@@ -28,7 +28,7 @@
         <div class="term-and-interest-rate flex">
           <div>
             <label for="">Mortgage Term</label>
-            <div class="input-container">
+            <div class="input-container-styling  flex">
               <input type="text">
               <button>Years</button>
             </div>
@@ -36,21 +36,20 @@
           </div>
           <div>
             <label for="">Interest Rate</label>
-            <label for=""></label>
-            <div class="input-container">
+            <div class="input-container-styling  flex">
               <input type="text">
               <button>%</button>
             </div>
             <span class="hidden">This field is required</span>
           </div>
         </div>
-        <div>
+        <div class="grid checkbox-container">
           <label for="">Mortgage Type</label>
-          <div class="checkbox-input">
+          <div class="checkbox-input input-container-styling  flex">
             <input type="checkbox"></input>
             <p>Repayment</p>
           </div>
-          <div class="checkbox-input">
+          <div class="checkbox-input input-container-styling  flex">
             <input type="checkbox"></input>
             <p>Interest Only</p>
           </div>

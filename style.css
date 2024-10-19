@@ -120,11 +120,12 @@ main {
   border-radius: 20px;
   overflow: hidden;
   grid-template-columns: 1fr 1fr;
+  gap: 1rem;
 }
 
 /* ------------------ INPUT SECTION -------------------------*/
 .input-section {
-  padding: 3rem 2rem;
+  padding: 3rem 2.5rem;
   background: lightpink;
 }
 
@@ -132,15 +133,34 @@ main {
   justify-content: space-between;
 }
 
-.term-and-interest-rate {
+form {
   gap: 1rem;
 }
 
-.input-container {
-  display: flex;
+.term-and-interest-rate {
+  gap: 1rem;
+  width: 100%;
+}
+
+.input-container-styling {
+  height: 2.5rem;
+  background: lightgreen;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.input-height > input {
+  height: 100%;
+}
+
+.checkbox-container {
+  gap: 1rem;
 }
 
 .checkbox-input {
+  place-items: center;
+  gap: 1rem;
+  padding: 0.3rem 0 0.3rem 0.5rem;
 }
 
 h1 {
