@@ -9,10 +9,10 @@
   <title>Mortgage repayment calculator</title>
 </head>
 
-<body>
-  <main>
+<body class="grid">
+  <main class="grid">
     <div class="input-section">
-      <div>
+      <div class="title-and-clear-all flex">
         <h1>Mortgage Calculator</h1>
         <button>Clear all</button>
       </div>
@@ -23,33 +23,35 @@
             <button>£</button>
             <input type="text">
           </div>
-          <span>This field is required</span>
+          <span class="hidden">This field is required</span>
         </div>
-        <div>
+        <div class="term-and-interest-rate flex">
           <div>
             <label for="">Mortgage Term</label>
-            <div>
+            <div class="input-container">
               <input type="text">
               <button>Years</button>
             </div>
-            <span>This field is required</span>
+            <span class="hidden">This field is required</span>
           </div>
           <div>
+            <label for="">Interest Rate</label>
             <label for=""></label>
-            <div><input type="text">
+            <div class="input-container">
+              <input type="text">
               <button>%</button>
             </div>
-            <span>This field is required</span>
+            <span class="hidden">This field is required</span>
           </div>
         </div>
         <div>
-          <label for=""></label>
-          <div>
-            <button type="checkbox"></button>
+          <label for="">Mortgage Type</label>
+          <div class="checkbox-input">
+            <input type="checkbox"></input>
             <p>Repayment</p>
           </div>
-          <div>
-            <button type="checkbox"></button>
+          <div class="checkbox-input">
+            <input type="checkbox"></input>
             <p>Interest Only</p>
           </div>
           <span>This field is required</span>
@@ -64,7 +66,7 @@
         <h3>Results shown here</h3>
         <p>Complete the form and click "calculate repayments" to see what your monthly repayments would be.</p>
       </div>
-      <div class="operations">
+      <div class="operations hidden">
         <h3>Your results</h3>
         <p>Your results are shown below based on the information you provided. To adjust the results, edit the form and
           click "calculate repayments" again.</p>
