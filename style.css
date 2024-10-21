@@ -107,6 +107,13 @@ html {
   display: grid;
 }
 
+.label-and-links-text {
+  color: var(--neutral-slate-700);
+  font-weight: var(--font-weight-bold);
+  opacity: 0.9;
+  font-size: 0.9rem;
+}
+
 /* ------------------ MAIN POSITIONING -------------------------*/
 body {
   place-items: center;
@@ -125,21 +132,30 @@ main {
 /* ------------------ INPUT SECTION -------------------------*/
 .input-section {
   padding: 2.5rem 2.5rem 2rem 2.5rem;
-  background: lightpink;
+  grid-template-rows: repeat(12, 1fr);
 }
 
 .title-and-clear-all {
   justify-content: space-between;
   align-items: start;
+  grid-row: span 2;
+}
+
+.title-and-clear-all > button {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  font-weight: var(--font-weight-bold);
+  color: var(--neutral-slate-500);
 }
 
 form {
   gap: 1rem;
   width: 100%;
+  grid-row: span 10;
 }
 
 .term-and-interest-rate {
-  gap: 1rem;
+  justify-content: space-between;
   width: 100%;
 }
 
@@ -149,16 +165,45 @@ form {
 
 .input-container-styling {
   height: 2.5rem;
-  background: lightgreen;
-  border: 1px solid black;
+  border: 1px solid var(--neutral-slate-500);
   border-radius: 5px;
+  overflow: hidden;
+}
+
+.pound-button,
+.years-button,
+.percentage-button {
+  color: var(--neutral-slate-700);
+  background: var(--neutral-slate-100);
+  font-weight: var(--font-weight-bold);
+}
+
+.pound-button {
+  width: 10%;
+}
+
+.years-button {
+  width: 70%;
+}
+
+.percentage-button {
+  width: 40%;
 }
 
 .input-height > input {
   height: 100%;
 }
 
-input {
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  border-radius: 100%;
+  border: 1px solid var(--neutral-slate-900);
+  height: 1rem;
+  width: 1rem;
+}
+
+input:not([type="checkbox"]) {
   width: 100%;
 }
 
@@ -170,19 +215,26 @@ input {
   place-items: center;
   gap: 1rem;
   padding: 0.3rem 0 0.3rem 0.5rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--neutral-slate-900);
 }
 
 .calculate-button {
   width: 80%;
-  background: lightblue;
+  background: var(--primary-lime);
+  color: var(--neutral-slate-900);
+  font-weight: var(--font-weight-bold);
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
   height: 3rem;
   border-radius: 1.5rem;
+  align-self: end;
 }
 
+/* ------------------ FONT - TEXT -------------------------*/
 h1 {
   font-size: 1.5rem;
+  color: var(--neutral-slate-900);
 }
