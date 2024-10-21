@@ -17,33 +17,33 @@
         <button>Clear all</button>
       </div>
       <form class="grid">
-        <div class="grid label-gap">
+        <div class="grid label-gap relative">
           <label for="pounds" class="label-and-links-text">Mortgage Amount</label>
           <div class="input-container-styling flex">
             <button class="pound-button">£</button>
             <input type="text" id="pounds">
           </div>
-          <span class="hidden">This field is required</span>
+          <span class="hidden absolute error-msg" id="mortgage-error">This field is required</span>
         </div>
         <div class="term-and-interest-rate flex">
-          <div class="grid label-gap">
+          <div class="grid label-gap relative">
             <label for="years" class="label-and-links-text">Mortgage Term</label>
             <div class="input-container-styling flex">
               <input type="text" id="years">
               <button class="years-button">years</button>
             </div>
-            <span class="hidden">This field is required</span>
+            <span class="hidden absolute error-msg" id="term-error">This field is required</span>
           </div>
-          <div class="grid label-gap">
+          <div class="grid label-gap relative">
             <label for="percentage" class="label-and-links-text">Interest Rate</label>
             <div class="input-container-styling  flex">
               <input type="text" id="percentage">
               <button class="percentage-button">%</button>
             </div>
-            <span class="hidden">This field is required</span>
+            <span class="hidden absolute error-msg" id="percentage-error">This field is required</span>
           </div>
         </div>
-        <div class="grid radio-container">
+        <div class="grid radio-container relative">
           <label class="label-and-links-text">Mortgage Type</label>
           <div class="radio-input input-container-styling flex">
             <div class="radio-group-container flex">
@@ -57,7 +57,7 @@
             </div>
             <label for="interestOnly">Interest Only</label>
           </div>
-          <span class=" hidden">This field is required</span>
+          <span class="hidden absolute error-msg" id="radio-error">This field is required</span>
         </div>
         <button class="calculate-button"><img src="./assets/images/icon-calculator.svg" alt="calculator"> Calculate
           Repayments</button>
@@ -70,7 +70,7 @@
         <h3>Results shown here</h3>
         <p>Complete the form and click "calculate repayments" to see what your monthly repayments would be.</p>
       </div>
-      <div class="operations hidden">
+      <div class="operations ">
         <h3>Your results</h3>
         <p>Your results are shown below based on the information you provided. To adjust the results, edit the form and
           click "calculate repayments" again.</p>
@@ -84,6 +84,7 @@
       </div>
     </div>
   </main>
+  <script src="./script.js"></script>
 </body>
 
 </html>

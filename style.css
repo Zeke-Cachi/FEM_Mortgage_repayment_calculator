@@ -116,6 +116,14 @@ html {
   font-size: 0.9rem;
 }
 
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
 /* ------------------ MAIN POSITIONING -------------------------*/
 body {
   place-items: center;
@@ -125,7 +133,7 @@ body {
 main {
   background: white;
   width: 65%;
-  height: 60%;
+  height: 65%;
   border-radius: 20px;
   overflow: hidden;
   grid-template-columns: 1fr 1fr;
@@ -134,7 +142,7 @@ main {
 /* ------------------ INPUT SECTION -------------------------*/
 .input-section {
   padding: 2.5rem 2.5rem 2rem 2.5rem;
-  grid-template-rows: repeat(12, 1fr);
+  grid-template-rows: repeat(13, 1fr);
 }
 
 .title-and-clear-all {
@@ -151,9 +159,9 @@ main {
 }
 
 form {
-  gap: 1rem;
+  gap: 1.2rem;
   width: 100%;
-  grid-row: span 10;
+  grid-row: span 11;
 }
 
 .term-and-interest-rate {
@@ -264,6 +272,13 @@ input:not([type="radio"]) {
 
 .calculate-button:hover {
   background: var(--faded-primary-lime-500);
+}
+
+.error-msg {
+  color: var(--primary-red);
+  font-weight: var(--font-weight-light);
+  font-size: 0.8rem;
+  bottom: -0.8rem;
 }
 
 /* ------------------ FONT - TEXT -------------------------*/
