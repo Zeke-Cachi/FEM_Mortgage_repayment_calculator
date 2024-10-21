@@ -11,13 +11,13 @@
 
 <body class="grid">
   <main class="grid">
-    <div class="input-section">
+    <div class="input-section grid">
       <div class="title-and-clear-all flex">
         <h1>Mortgage Calculator</h1>
         <button>Clear all</button>
       </div>
       <form class="grid">
-        <div>
+        <div class=" grid label-gap">
           <label>Mortgage Amount</label>
           <div class="input-container-styling ">
             <button>£</button>
@@ -26,7 +26,7 @@
           <span class="hidden">This field is required</span>
         </div>
         <div class="term-and-interest-rate flex">
-          <div>
+          <div class="grid label-gap">
             <label for="">Mortgage Term</label>
             <div class="input-container-styling  flex">
               <input type="text">
@@ -34,7 +34,7 @@
             </div>
             <span class="hidden">This field is required</span>
           </div>
-          <div>
+          <div class="grid label-gap">
             <label for="">Interest Rate</label>
             <div class="input-container-styling  flex">
               <input type="text">
@@ -53,9 +53,10 @@
             <input type="checkbox"></input>
             <p>Interest Only</p>
           </div>
-          <span>This field is required</span>
+          <span class="hidden">This field is required</span>
         </div>
-        <button><img src="./assets/images/icon-calculator.svg" alt="calculator"> Calculate Repayments</button>
+        <button class="calculate-button"><img src="./assets/images/icon-calculator.svg" alt="calculator"> Calculate
+          Repayments</button>
       </form>
     </div>
 
