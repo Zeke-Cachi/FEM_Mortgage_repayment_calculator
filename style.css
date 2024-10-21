@@ -68,6 +68,8 @@ html {
 :root {
   --main-font-size: 16px;
   --primary-lime: hsl(61, 70%, 52%);
+  --faded-primary-lime-100: hsla(61, 70%, 52%, 0.1);
+  --faded-primary-lime-500: hsla(61, 70%, 52%, 0.5);
   --primary-red: hsl(4, 69%, 50%);
   --neutral-slate-100: hsl(202, 86%, 94%);
   --neutral-slate-300: hsl(203, 41%, 72%);
@@ -170,6 +172,17 @@ form {
   overflow: hidden;
 }
 
+.input-container-styling:focus-within {
+  border: 1px solid var(--primary-lime);
+}
+
+.input-container-styling:focus-within .pound-button,
+.input-container-styling:focus-within .years-button,
+.input-container-styling:focus-within .percentage-button {
+  background: var(--primary-lime);
+  color: var(--neutral-slate-900);
+}
+
 .pound-button,
 .years-button,
 .percentage-button {
@@ -194,29 +207,45 @@ form {
   height: 100%;
 }
 
-input[type="checkbox"] {
+input[type="radio"]:checked {
+  background: var(--primary-lime);
+  border-radius: 50%;
   appearance: none;
   -webkit-appearance: none;
-  border-radius: 100%;
-  border: 1px solid var(--neutral-slate-900);
-  height: 1rem;
-  width: 1rem;
+  height: 0.4rem;
+  width: 0.4rem;
+  box-shadow: 0px 0px 0px 2px white, 0px 0px 0px 4px var(--primary-lime);
 }
 
-input:not([type="checkbox"]) {
+input:not([type="radio"]) {
   width: 100%;
+  color: var(--neutral-slate-900);
+  padding-left: 0.8rem;
+  font-weight: var(--font-weight-bold);
 }
 
-.checkbox-container {
+.radio-container {
   gap: 0.5rem;
 }
 
-.checkbox-input {
+.radio-input {
   place-items: center;
   gap: 1rem;
   padding: 0.3rem 0 0.3rem 0.5rem;
   font-weight: var(--font-weight-bold);
   color: var(--neutral-slate-900);
+}
+
+.radio-input:focus-within {
+  background: var(--faded-primary-lime-100);
+}
+
+.radio-group-container {
+  flex-basis: 1rem;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
 }
 
 .calculate-button {
@@ -231,6 +260,10 @@ input:not([type="checkbox"]) {
   height: 3rem;
   border-radius: 1.5rem;
   align-self: end;
+}
+
+.calculate-button:hover {
+  background: var(--faded-primary-lime-500);
 }
 
 /* ------------------ FONT - TEXT -------------------------*/

@@ -18,40 +18,44 @@
       </div>
       <form class="grid">
         <div class="grid label-gap">
-          <label class="label-and-links-text">Mortgage Amount</label>
+          <label for="pounds" class="label-and-links-text">Mortgage Amount</label>
           <div class="input-container-styling flex">
             <button class="pound-button">£</button>
-            <input type="text">
+            <input type="text" id="pounds">
           </div>
           <span class="hidden">This field is required</span>
         </div>
         <div class="term-and-interest-rate flex">
           <div class="grid label-gap">
-            <label class="label-and-links-text">Mortgage Term</label>
+            <label for="years" class="label-and-links-text">Mortgage Term</label>
             <div class="input-container-styling flex">
-              <input type="text">
+              <input type="text" id="years">
               <button class="years-button">years</button>
             </div>
             <span class="hidden">This field is required</span>
           </div>
           <div class="grid label-gap">
-            <label class="label-and-links-text">Interest Rate</label>
+            <label for="percentage" class="label-and-links-text">Interest Rate</label>
             <div class="input-container-styling  flex">
-              <input type="text">
+              <input type="text" id="percentage">
               <button class="percentage-button">%</button>
             </div>
             <span class="hidden">This field is required</span>
           </div>
         </div>
-        <div class="grid checkbox-container">
+        <div class="grid radio-container">
           <label class="label-and-links-text">Mortgage Type</label>
-          <div class="checkbox-input input-container-styling flex">
-            <input type="checkbox"></input>
-            <p>Repayment</p>
+          <div class="radio-input input-container-styling flex">
+            <div class="radio-group-container flex">
+              <input type="radio" id="repayment" name="radio-group" value="repayment"></input>
+            </div>
+            <label for="repayment">Repayment</label>
           </div>
-          <div class="checkbox-input input-container-styling flex">
-            <input type="checkbox"></input>
-            <p>Interest Only</p>
+          <div class="radio-input input-container-styling flex">
+            <div class="radio-group-container flex">
+              <input type="radio" id="interestOnly" name="radio-group" value="interest-only"></input>
+            </div>
+            <label for="interestOnly">Interest Only</label>
           </div>
           <span class=" hidden">This field is required</span>
         </div>
