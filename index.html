@@ -66,22 +66,26 @@
 
     <div class="output-section-container">
       <div class="output-section grid">
-        <div class="no-operations flex">
+        <div class="no-operations hidden">
           <img src="./assets/images/illustration-empty.svg" alt="calculators">
-          <h3>Results shown here</h3>
+          <h3 class>Results shown here</h3>
           <p>Complete the form and click "calculate repayments" to see what your monthly repayments would be.</p>
         </div>
-        <div class="operations hidden">
+        <div class="operations grid">
           <h3>Your results</h3>
           <p>Your results are shown below based on the information you provided. To adjust the results, edit the form
             and
             click "calculate repayments" again.</p>
-          <div>
-            <h4>Your monthly repayments</h4>
-            <h3 class="monthly-repayment"></h3>
+          <div class="results grid relative">
+            <div>
+              <h4>Your monthly repayments</h4>
+              <h3 class="monthly-repayment">£1,797.74</h3>
+            </div>
             <hr>
-            <p>Total you'll repay over the term</p>
-            <span class="total-repay"></span>
+            <div class="total">
+              <p>Total you'll repay over the term</p>
+              <span class="total-repay">£539,322.94</span>
+            </div>
           </div>
         </div>
       </div>

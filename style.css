@@ -76,6 +76,7 @@ html {
   --neutral-slate-500: hsl(200, 26%, 54%);
   --neutral-slate-700: hsl(200, 24%, 40%);
   --neutral-slate-900: hsl(202, 55%, 16%);
+  --dark-blue: #0e2431;
   --font-weight-light: 500;
   --font-weight-bold: 700;
 }
@@ -304,6 +305,49 @@ input:not([type="radio"]) {
   color: white;
 }
 
+.operations {
+  height: 100%;
+  grid-template-rows: repeat(8, 1fr);
+  isolation: isolate;
+}
+
+.operations > h3 {
+  grid-row: span 1;
+  color: white;
+}
+
+.operations > p {
+  grid-row: span 2;
+  color: var(--neutral-slate-100);
+  opacity: 0.5;
+  font-weight: var(--font-weight-bold);
+}
+
+.results {
+  grid-row: span 4;
+  background: var(--dark-blue);
+  border-radius: 10px;
+  gap: 1.5rem;
+  padding: 1.5rem;
+}
+
+.results::before {
+  content: "";
+  position: absolute;
+  inset: -0.2rem 0 0 0;
+  background: var(--primary-lime);
+  z-index: -1;
+  border-radius: 10px;
+}
+
+hr {
+  height: 1px;
+  color: var(--neutral-slate-100);
+  opacity: 0.1;
+  width: 100%;
+  place-self: center;
+}
+
 /* ------------------ FONT - TEXT -------------------------*/
 h1 {
   font-size: 1.5rem;
@@ -320,4 +364,22 @@ h3 {
   text-align: center;
   font-weight: var(--font-weight-bold);
   padding-inline: 2.9rem;
+}
+
+h4,
+.total > p {
+  color: var(--neutral-slate-100);
+  opacity: 0.5;
+  font-weight: var(--font-weight-bold);
+}
+
+.monthly-repayment {
+  color: var(--primary-lime);
+  font-size: 3.5rem;
+}
+
+.total-repay {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: var(--font-weight-bold);
 }
