@@ -14,7 +14,7 @@
     <div class="input-section grid">
       <div class="title-and-clear-all flex">
         <h1>Mortgage Calculator</h1>
-        <button>Clear all</button>
+        <button class="clear-all-button">Clear all</button>
       </div>
       <form class="grid">
         <div class="grid label-gap relative">
@@ -64,22 +64,25 @@
       </form>
     </div>
 
-    <div class="output-section">
-      <div class="no-operations">
-        <img src="./assets/images/illustration-empty.svg" alt="calculators">
-        <h3>Results shown here</h3>
-        <p>Complete the form and click "calculate repayments" to see what your monthly repayments would be.</p>
-      </div>
-      <div class="operations hidden">
-        <h3>Your results</h3>
-        <p>Your results are shown below based on the information you provided. To adjust the results, edit the form and
-          click "calculate repayments" again.</p>
-        <div>
-          <h4>Your monthly repayments</h4>
-          <h3 class="monthly-repayment"></h3>
-          <hr>
-          <p>Total you'll repay over the term</p>
-          <span class="total-repay"></span>
+    <div class="output-section-container">
+      <div class="output-section">
+        <div class="no-operations">
+          <img src="./assets/images/illustration-empty.svg" alt="calculators">
+          <h3>Results shown here</h3>
+          <p>Complete the form and click "calculate repayments" to see what your monthly repayments would be.</p>
+        </div>
+        <div class="operations hidden">
+          <h3>Your results</h3>
+          <p>Your results are shown below based on the information you provided. To adjust the results, edit the form
+            and
+            click "calculate repayments" again.</p>
+          <div>
+            <h4>Your monthly repayments</h4>
+            <h3 class="monthly-repayment"></h3>
+            <hr>
+            <p>Total you'll repay over the term</p>
+            <span class="total-repay"></span>
+          </div>
         </div>
       </div>
     </div>

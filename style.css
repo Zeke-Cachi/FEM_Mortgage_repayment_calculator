@@ -282,6 +282,16 @@ input:not([type="radio"]) {
   bottom: -0.8rem;
 }
 
+/* ------------------ OUTPUT SECTION -------------------------*/
+.output-section-container {
+  background: white;
+}
+
+.output-section {
+  background: var(--neutral-slate-900);
+  border-bottom-left-radius: 80px;
+}
+
 /* ------------------ FONT - TEXT -------------------------*/
 h1 {
   font-size: 1.5rem;

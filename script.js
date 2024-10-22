@@ -14,6 +14,7 @@ const poundButton = document.querySelector(".pound-button");
 const yearsButton = document.querySelector(".years-button");
 const percentageButton = document.querySelector(".percentage-button");
 const submitButton = document.querySelector(".calculate-button");
+const clearAllButton = document.querySelector(".clear-all-button");
 
 //------------ INPUT CONTAINERS -------------------//
 
@@ -24,7 +25,30 @@ percentageInputContainer = document.getElementById("percentageContainer");
 inputList.forEach((input) => {
   input.addEventListener("blur", (e) => {
     if (input.id === "repayment" || input.id === "interestOnly") return;
-    if (isNaN(Number(e.target.value)) && e.target.value !== "") {
+    if (e.target.value === "") {
+      switch (input.id) {
+        case "pounds":
+          mortgageError.classList.add("hidden");
+          poundButton.removeAttribute("style");
+          poundInputContainer.removeAttribute("style");
+          break;
+        case "years":
+          termError.classList.add("hidden");
+          yearsButton.removeAttribute("style");
+          yearsInputContainer.removeAttribute("style");
+          break;
+        case "percentage":
+          percentageError.classList.add("hidden");
+          percentageButton.removeAttribute("style");
+          percentageInputContainer.removeAttribute("style");
+          1;
+
+          break;
+        default:
+          break;
+      }
+    }
+    if (isNaN(Number(e.target.value))) {
       switch (input.id) {
         case "pounds":
           mortgageError.classList.remove("hidden");
@@ -86,4 +110,39 @@ submitButton.addEventListener("click", (e) => {
   if (!repaymentRadioButton.checked && !interestOnlyRadioButton.checked) {
     radioError.classList.remove("hidden");
   }
+  inputList.map((input) => {
+    if (input.value === "") {
+      switch (input.id) {
+        case "pounds":
+          mortgageError.classList.remove("hidden");
+          break;
+        case "years":
+          termError.classList.remove("hidden");
+          break;
+        case "percentage":
+          percentageError.classList.remove("hidden");
+          break;
+        default:
+          break;
+      }
+    }
+  });
+});
+
+clearAllButton.addEventListener("click", (e) => {
+  e.preventDefault();
+  inputList.map((input) => {
+    if (input.id === "repayment" || input.id === "interestOnly") {
+      input.checked = false;
+    }
+    input.value = "";
+    poundButton.removeAttribute("style");
+    poundInputContainer.removeAttribute("style");
+    yearsButton.removeAttribute("style");
+    yearsInputContainer.removeAttribute("style");
+    percentageButton.removeAttribute("style");
+    percentageInputContainer.removeAttribute("style");
+    const errorList = [radioError, percentageError, termError, mortgageError];
+    errorList.forEach((error) => error.classList.add("hidden"));
+  });
 });
