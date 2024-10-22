@@ -19,7 +19,7 @@
       <form class="grid">
         <div class="grid label-gap relative">
           <label for="pounds" class="label-and-links-text">Mortgage Amount</label>
-          <div class="input-container-styling flex">
+          <div class="input-container-styling flex" id="poundContainer">
             <button class="pound-button">£</button>
             <input type="text" id="pounds">
           </div>
@@ -28,7 +28,7 @@
         <div class="term-and-interest-rate flex">
           <div class="grid label-gap relative">
             <label for="years" class="label-and-links-text">Mortgage Term</label>
-            <div class="input-container-styling flex">
+            <div class="input-container-styling flex" id="yearsContainer">
               <input type="text" id="years">
               <button class="years-button">years</button>
             </div>
@@ -36,7 +36,7 @@
           </div>
           <div class="grid label-gap relative">
             <label for="percentage" class="label-and-links-text">Interest Rate</label>
-            <div class="input-container-styling  flex">
+            <div class="input-container-styling flex" id="percentageContainer">
               <input type="text" id="percentage">
               <button class="percentage-button">%</button>
             </div>
@@ -57,7 +57,7 @@
             </div>
             <label for="interestOnly">Interest Only</label>
           </div>
-          <span class="hidden absolute error-msg" id="radio-error">This field is required</span>
+          <span class="hidden absolute error-msg" id="radioError">This field is required</span>
         </div>
         <button class="calculate-button"><img src="./assets/images/icon-calculator.svg" alt="calculator"> Calculate
           Repayments</button>

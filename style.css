@@ -197,6 +197,7 @@ form {
   color: var(--neutral-slate-700);
   background: var(--neutral-slate-100);
   font-weight: var(--font-weight-bold);
+  pointer-events: none;
 }
 
 .pound-button {
