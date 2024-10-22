@@ -286,6 +286,8 @@ input:not([type="radio"]) {
 /* ------------------ OUTPUT SECTION -------------------------*/
 .output-section-container {
   background: white;
+  height: 100%;
+  width: 100%;
 }
 
 .output-section {
@@ -382,4 +384,21 @@ h4,
   color: white;
   font-size: 1.5rem;
   font-weight: var(--font-weight-bold);
+}
+
+/* ------------------ MEDIA QUERIES -------------------------*/
+@media screen and (max-width: 768px) {
+  main {
+    height: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  .input-section {
+    grid-row: span 2;
+  }
+
+  .output-section-container {
+    grid-row: span 1;
+  }
 }
