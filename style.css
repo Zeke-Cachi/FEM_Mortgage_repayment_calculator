@@ -290,10 +290,34 @@ input:not([type="radio"]) {
 .output-section {
   background: var(--neutral-slate-900);
   border-bottom-left-radius: 80px;
+  height: 100%;
+  width: 100%;
+  place-items: center;
+  padding: 2.5rem 2.5rem 2rem 2.5rem;
+}
+
+.no-operations {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  color: white;
 }
 
 /* ------------------ FONT - TEXT -------------------------*/
 h1 {
   font-size: 1.5rem;
   color: var(--neutral-slate-900);
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+.no-operations > p {
+  opacity: 0.5;
+  font-size: 1rem;
+  text-align: center;
+  font-weight: var(--font-weight-bold);
+  padding-inline: 2.9rem;
 }
