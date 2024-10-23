@@ -361,6 +361,7 @@ h3 {
 }
 
 .no-operations > p {
+  color: var(--neutral-slate-100);
   opacity: 0.5;
   font-size: 1rem;
   text-align: center;
@@ -391,14 +392,51 @@ h4,
   main {
     height: 100%;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: 3fr 1fr;
+    width: 100%;
+    border-radius: 0;
   }
 
   .input-section {
-    grid-row: span 2;
+    padding: 1rem;
+    grid-template-rows: 1fr 5fr;
+    gap: 1rem;
   }
 
-  .output-section-container {
-    grid-row: span 1;
+  .title-and-clear-all {
+    flex-direction: column;
+    justify-content: center;
+    grid-row: 1/2;
+  }
+
+  form {
+    grid-row: 2/6;
+  }
+
+  .term-and-interest-rate {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  .years-button {
+    width: 30%;
+  }
+
+  .percentage-button {
+    width: 20%;
+  }
+
+  .calculate-button {
+    place-self: center;
+  }
+
+  .output-section {
+    border-radius: 0;
+    padding: 1rem;
+  }
+
+  .no-operations > p {
+    font-size: 0.9rem;
+    padding-inline: 1rem;
   }
 }
