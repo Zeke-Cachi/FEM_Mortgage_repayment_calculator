@@ -10,7 +10,7 @@
 
 html,
 body {
-  height: 115%;
+  height: 100%;
   font-size: 100%;
   line-height: 1.5;
 }
@@ -389,6 +389,11 @@ h4,
 
 /* ------------------ MEDIA QUERIES -------------------------*/
 @media screen and (max-width: 768px) {
+  html,
+  body {
+    height: 115%;
+  }
+
   main {
     min-height: 100%;
     grid-template-columns: 1fr;
