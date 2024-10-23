@@ -22,6 +22,10 @@ poundInputContainer = document.getElementById("poundContainer");
 yearsInputContainer = document.getElementById("yearsContainer");
 percentageInputContainer = document.getElementById("percentageContainer");
 
+//------------ OUTPUT SECTIONS -------------------//
+const operations = document.querySelector(".operations");
+const noOperations = document.querySelector(".no-operations");
+
 inputList.forEach((input) => {
   input.addEventListener("blur", (e) => {
     if (input.id === "repayment" || input.id === "interestOnly") return;
@@ -127,6 +131,10 @@ submitButton.addEventListener("click", (e) => {
       }
     }
   });
+  operations.classList.remove("hidden");
+  operations.classList.add("grid");
+  noOperations.classList.remove("flex");
+  noOperations.classList.add("hidden");
 });
 
 clearAllButton.addEventListener("click", (e) => {
