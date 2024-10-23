@@ -439,4 +439,21 @@ h4,
     font-size: 0.9rem;
     padding-inline: 1rem;
   }
+
+  .operations {
+    grid-template-rows: auto;
+    gap: 1rem;
+  }
+
+  .operations > p {
+    margin-bottom: 1rem;
+  }
+
+  .results {
+    gap: 0.5rem;
+  }
+
+  .monthly-repayment {
+    font-size: 2.5rem;
+  }
 }
